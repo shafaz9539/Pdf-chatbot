@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', path='styless.css') }}">
+  <title>Chatty Document ChatBot</title>
+</head>
+
+<body>
+  <main class="main-container">
+    <div class="container">
+      <h1>Chatty Document AI ChatBot 🚀</h1>
+      <form action="/upload/" enctype="multipart/form-data" method="POST" class="form">
+        <h3>Upload File</h3>
+        <div class="choose">
+          <input type="file" id="fileInput" name="file" onchange="updateFileName()" accept=".pdf" hidden/>
+          <label for="fileInput">Choose file</label>
+          <p id="fileNameDisplay">Note: Pdf format only</p>
+          
+
+        </div>
+        <input type="submit" value="Upload" class="upload">
+
+
+      </form>
+      <div ></div>
+      
+    </div>
+  </main>
+  <script src="{{ url_for('static', path='script.js') }}"></script>
+</body>
+
+</html>
